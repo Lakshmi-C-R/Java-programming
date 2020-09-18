@@ -1,0 +1,17 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter Principal amount:");
+        Scanner principal=new Scanner(System.in);
+        float p=principal.nextFloat();
+        System.out.println("Enter time:");
+        Scanner time=new Scanner(System.in);
+        int n=time.nextInt();
+        System.out.println("Enter rate:");
+        Scanner rate=new Scanner(System.in);
+        float r= rate.nextFloat();
+        float SI=(p*n*r)/100;
+        System.out.println("Simple interest="+SI);
+    }
+}
