@@ -1,0 +1,19 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter Base value:");
+        Scanner x=new Scanner(System.in);
+        int base=x.nextInt();
+        System.out.print("Enter Exponent:");
+        Scanner y=new Scanner(System.in);
+        int exponent=y.nextInt();
+        int i=1,p=1;
+        while(i<=exponent)
+        {
+            p=p*base;
+            i=i+1;
+        }
+        System.out.println("Power="+p);
+    }
+}
