@@ -1,0 +1,14 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        float f;
+        System.out.println("ENTER DEGREE IN CELSIUS:");
+        Scanner celsius=new Scanner(System.in);
+        float c=celsius.nextFloat();
+        celsius.close();
+        f = ((c * 9) / 5) + 32;
+        System.out.println("fahrenheit="+f);
+        celsius.close();
+    }
+}
