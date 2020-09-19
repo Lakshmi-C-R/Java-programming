@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+	System.out.print("Enter a:");
+	Scanner x=new Scanner(System.in);
+	int a=x.nextInt();
+	System.out.print("Enter b:");
+	Scanner y=new Scanner(System.in);
+	int b=y.nextInt();
+	int c;
+	c=a;
+	a=b;
+	b=c;
+	System.out.println("After swapping,a="+a+" b="+b);
+    }
+}
