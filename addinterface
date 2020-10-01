@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.Scanner;
+interface add
+{
+	int addition();
+}
+class addinterface implements add 
+{
+	public int addition()
+	{
+		try{
+		File file = new File("E:\\Revathi\\input.txt");
+		Scanner s=new Scanner(file);
+		float l,m;
+		l=s.nextFloat();
+		m=s.nextFloat();
+		float c;
+		c=l+m;
+		FileOutputStream fout=new FileOutputStream("E:\\Revathi\\output.txt");
+		DataOutputStream dos=new DataOutputStream(fout);
+		dos.writeFloat(c);
+		System.out.println("***Addition of two float numbers using interface***");
+		System.out.println("Sum=   "+c);
+		dos.close();
+		}
+		catch(IOException e){}
+		return 0;
+	}
+	
+	public static void main(String args[])throws IOException
+	{ 
+		add obj=new addinterface();
+		obj.addition();	
+	}
+}
