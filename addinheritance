@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.Scanner;
+class add
+{
+	void addition()
+	{
+		try{
+		File file = new File("E:\\Revathi\\input.txt");
+		Scanner s=new Scanner(file);
+		float l,m;
+		l=s.nextFloat();
+		m=s.nextFloat();
+		float c;
+		c=l+m;
+		FileOutputStream fout=new FileOutputStream("E:\\Revathi.output.txt");
+		DataOutputStream dos=new DataOutputStream(fout);
+		dos.writeFloat(c);
+		System.out.println("***Addition of two float using inheritance***");
+		System.out.println("Sum="+c);
+		dos.close();
+		}
+		catch(IOException e){}
+	
+	}
+}
+class addinheritance extends add 
+{
+	public static void main(String args[])throws IOException
+	{ 
+		add obj=new addinheritance();
+		obj.addition();	
+	}
+}
